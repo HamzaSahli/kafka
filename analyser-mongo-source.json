@@ -1,0 +1,10 @@
+{
+    "name": "analyser-mongo-source",
+    "config": {
+        "connector.class": "com.mongodb.kafka.connect.MongoSourceConnector",
+        "tasks.max": "1",
+        "connection.uri":"mongodb://mongodb_helios:27017,mongob1:27017,mongob2:27017",
+        "mode": "incrementing",
+        "database":"HELIOS",
+        "collection":"ScrapingData"       }
+}

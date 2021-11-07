@@ -1,0 +1,16 @@
+{
+    "name": "scraper-mongo-sink",
+    "config": {
+        "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+        "tasks.max": "1",
+        "topics": "rawdata",
+        "connection.uri": "mongodb://mongodb_helios:27017,mongob1:27017,mongob2:27017",
+        "database": "HELIOS",
+        "collection": "ScrapingData",
+        "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+        "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "value.converter.schemas.enable": "false",
+        "key.ignore":"true",
+        "errors.tolerance": "all"
+    }
+}
